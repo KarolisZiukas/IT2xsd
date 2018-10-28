@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xs:element name="AutomobiliuAikstele" type="AutomobiliuAiksteleTipas">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  targetNamespace="/Ziukas/AutomobiliuAikstele">
+  <xs:element name="AutomobiliuAikstele" type="cmn:AutomobiliuAiksteleTipas">
     <xs:key name="AutomobilioRaktas">
       <xs:selector xpath="grupe/Automobilis"/>
       <xs:field xpath="@id"/>
@@ -152,29 +153,6 @@
     </xs:extension>
   </xs:simpleContent>
 </xs:complexType> -->
-
-    <xs:complexType name="VariklisSuSerijosNumeriu">
-      <xs:simpleContent>
-        <xs:extension base="VariklisTipas">
-          <xs:attribute name="serijosNumeris" type="xs:string"/>
-        </xs:extension>
-      </xs:simpleContent>
-    </xs:complexType>
-
-
-
-<xs:complexType name="KainaSuRibojimu">
-  <xs:simpleContent>
-    <xs:restriction base="RatuDydis">
-      <xs:maxInclusive value="5000"/>
-    </xs:restriction>
-  </xs:simpleContent>
-</xs:complexType>
-
-<xs:complexType name="ImportavimoDataSuSalimi">
-  <xs:simpleContent>
-  </xs:simpleContent>
-</xs:complexType>
 
 Paprastas tipas, apribojantis kokį nors Schema standartinį tipą, + Kaina
 
