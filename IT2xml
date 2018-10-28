@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AutomobiliuAikstele>
+   <grupe kebuloTipas="universalas">
+      <Automobilis id="1">
+         <BendraInformacija>
+            <Marke>Vw</Marke>
+            <Modelis>Golf</Modelis>
+            <PagaminimoData>1997-12-12</PagaminimoData>
+            <kaina>1500</kaina>
+         </BendraInformacija>
+         <Variklis serijosNumeris="00001">
+            <DarbinisTuris>1.9</DarbinisTuris>
+            <Galia>81kw</Galia>
+         </Variklis>
+         <Ratai dydis="17">
+            <PagaminimoData>2015-12-12</PagaminimoData>
+            <Padangos>Ziemines</Padangos>
+         </Ratai>
+      </Automobilis>
+      <Automobilis id="2">
+         <BendraInformacija>
+            <Marke>Audi</Marke>
+            <Modelis>A3</Modelis>
+            <PagaminimoData>2014-02-02</PagaminimoData>
+            <kaina>5000</kaina>
+         </BendraInformacija>
+         <Variklis serijosNumeris="00002">
+            <DarbinisTuris>2.0</DarbinisTuris>
+            <Galia>100kw</Galia>
+         </Variklis>
+         <Ratai dydis="17">
+            <PagaminimoData>2016-02-23</PagaminimoData>
+            <Padangos>Vasarines</Padangos>
+         </Ratai>
+      </Automobilis>
+   </grupe>
+   <grupe kebuloTipas="sedanas">
+      <Automobilis id="3">
+         <BendraInformacija>
+            <Marke>BMW</Marke>
+            <Modelis>330d</Modelis>
+            <PagaminimoData>2005-06-04</PagaminimoData>
+            <kaina>2500</kaina>
+         </BendraInformacija>
+         <Variklis serijosNumeris="00003">
+            <DarbinisTuris>3.0</DarbinisTuris>
+            <Galia>135kw</Galia>
+         </Variklis>
+         <Ratai dydis="17">
+            <PagaminimoData>2017-04-05</PagaminimoData>
+            <Padangos>Vasarines</Padangos>
+         </Ratai>
+      </Automobilis>
+      <Automobilis id="4">
+         <BendraInformacija>
+            <Marke>Skoda</Marke>
+            <Modelis>Octavia</Modelis>
+            <PagaminimoData>2000-12-10</PagaminimoData>
+            <kaina>2000</kaina>
+         </BendraInformacija>
+         <Variklis serijosNumeris="00004">
+            <DarbinisTuris>1.9</DarbinisTuris>
+            <Galia>81lw</Galia>
+         </Variklis>
+         <Ratai dydis="16">
+            <PagaminimoData>2006-05-05</PagaminimoData>
+            <Padangos>Ziemines</Padangos>
+         </Ratai>
+      </Automobilis>
+   </grupe>
+</AutomobiliuAikstele>
+
+
+descendant::grupe[1]/Automobilis/ancestor::grupe[position() = last()]/ancestor::*
+
+1.
+/AutomobiliuAikstele/grupe[1]/Automobilis
+/AutomobiliuAikstele/grupe[1]/Automobilis/child::* - child
+/AutomobiliuAikstele/grupe[1]/Automobilis/ancestor::* - ancestor
+/AutomobiliuAikstele/grupe[1]/Automobilis/following-sibling::* - following siblings
+/AutomobiliuAikstele/grupe[1]/Automobilis/preceding-sibling::* - preceding siblings
+/AutomobiliuAikstele/grupe[1]/Automobilis/following::* - following - viskas is desines
+/AutomobiliuAikstele/grupe[1]/Automobilis/preceding::* - preceding - viska is kaires
+/AutomobiliuAikstele/grupe[1]/Automobilis/attribute::* - atributai
+
+2.
+/AutomobiliuAikstele/grupe[1]/Automobilis/Ratai[@dydis=//AutomobiliuAikstele/grupe[2]/Automobilis[1]/Ratai/@dydis]
+
+3.
+count(//Automobilis)
+sum(//Automobilis/BendraInformacija/kaina)
+
+4.
+boolean(/AutomobiliuAikstele/grupe[1]) = 1 (true) skaicius yra true, aibe netuscia, todel true
+/AutomobiliuAikstele/grupe[1]/Automobilis/BendraInformacija/kaina < "5000" (true) kaina 1500, stringas verciamas i skaiciu 5000
+/AutomobiliuAikstele/grupe[1]/Automobilis/BendraInformacija/kaina + boolean(23324) (1501), boolean pavercia bet koki skaiciu i true ir true = 1
+
+5.
+descendant::grupe[1]/Automobilis[1]/child::* ? - pasiaiskinti sita labiau
+
+6.
+/AutomobiliuAikstele/grupe[1]/Automobilis/BendraInformacija/kaina = 1500 - true
+/AutomobiliuAikstele/grupe[1]/Automobilis/BendraInformacija/Marke = "Vw" - true. iesko Stringo
+/AutomobiliuAikstele/grupe[1]/Automobilis/BendraInformacija = true() - true. aibe netuscia
+/AutomobiliuAikstele/grupe[1]/Automobilis/BendraInformacija/Marke = /AutomobiliuAikstele/grupe[2]/Automobilis/BendraInformacija/Marke (Reikia pakeist pirmos aibes marke i BMW)
+
+7.
+/AutomobiliuAikstele/grupe[1]/Automobilis/BendraInformacija/kaina > /AutomobiliuAikstele/grupe[2]/Automobilis/BendraInformacija/kaina true, yra kaina 5000 kuri didesne uz bent viena kaina is grupes 2
+/AutomobiliuAikstele/grupe[1]/Automobilis/Variklis/DarbinisTuris < /AutomobiliuAikstele/grupe[2]/Automobilis/Variklis/DarbinisTuris true, yra grupeje 1 mazesnis variklis uz grupeje 2

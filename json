@@ -1,0 +1,94 @@
+{
+  "AutomobiliuAikstele": {
+    "-xmlns:automobiliuSrytis": "/Automobilis",
+    "-xmlns:padanguSrytis": "/Padangos",
+    "grupe": [
+      {
+        "-kebuloTipas": "universalas",
+        "Automobilis": [
+          {
+            "-id": "1",
+            "BendraInformacija": {
+              "Marke": "Vw",
+              "Modelis": "Golf",
+              "PagaminimoData": "1997-12-12",
+              "kaina": "1500"
+            },
+            "Variklis": {
+              "-serijosNumeris": "00001",
+              "DarbinisTuris": "1.9",
+              "Galia": "81kw"
+            },
+            "Ratai": {
+              "-dydis": "17",
+              "padanguSrytis:PagaminimoData": "2015-12-12",
+              "Padangos": "Ziemines"
+            }
+          },
+          {
+            "-id": "2",
+            "BendraInformacija": {
+              "Marke": "Audi",
+              "Modelis": "A3",
+              "PagaminimoData": "2014-02-02",
+              "kaina": "5000"
+            },
+            "Variklis": {
+              "-serijosNumeris": "00002",
+              "DarbinisTuris": "2.0",
+              "Galia": "100kw"
+            },
+            "Ratai": {
+              "-dydis": "17",
+              "padanguSrytis:PagaminimoData": "2016-02-23",
+              "Padangos": "Vasarines"
+            }
+          }
+        ]
+      },
+      {
+        "-kebuloTipas": "sedanas",
+        "Automobilis": [
+          {
+            "-id": "3",
+            "BendraInformacija": {
+              "Marke": "BMW",
+              "Modelis": "330d",
+              "PagaminimoData": "2005-06-04",
+              "kaina": "2500"
+            },
+            "Variklis": {
+              "-serijosNumeris": "00003",
+              "DarbinisTuris": "3.0",
+              "Galia": "135kw"
+            },
+            "Ratai": {
+              "-dydis": "17",
+              "padanguSrytis:PagaminimoData": "2017-04-05",
+              "Padangos": "Vasarines"
+            }
+          },
+          {
+            "-id": "4",
+            "BendraInformacija": {
+              "Marke": "Skoda",
+              "Modelis": "Octavia",
+              "PagaminimoData": "2000-12-10",
+              "kaina": "2000"
+            },
+            "Variklis": {
+              "-serijosNumeris": "00004",
+              "DarbinisTuris": "1.9",
+              "Galia": "81lw"
+            },
+            "Ratai": {
+              "-dydis": "16",
+              "padanguSrytis:PagaminimoData": "2006-05-05",
+              "Padangos": "Ziemines"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}
