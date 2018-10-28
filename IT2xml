@@ -9,12 +9,13 @@
             <kaina>1500</kaina>
          </BendraInformacija>
          <Variklis serijosNumeris="00001">
-            <DarbinisTuris>1.9</DarbinisTuris>
-            <Galia>81kw</Galia>
+            <KuroTipas DarbinisTuris="1.9">Dyzelinas</KuroTipas>
+            <GaliaKW>81</GaliaKW>
          </Variklis>
          <Ratai dydis="17">
             <PagaminimoData>2015-12-12</PagaminimoData>
             <Padangos>Ziemines</Padangos>
+            <PadanguSlegis>2.0 2.0 2.1 2.1</PadanguSlegis>
          </Ratai>
       </Automobilis>
       <Automobilis id="2">
@@ -25,33 +26,48 @@
             <kaina>5000</kaina>
          </BendraInformacija>
          <Variklis serijosNumeris="00002">
-            <DarbinisTuris>2.0</DarbinisTuris>
-            <Galia>100kw</Galia>
+            <KuroTipas DarbinisTuris="2.0">Benzinas/dujos</KuroTipas>
+            <GaliaKW>100</GaliaKW>
          </Variklis>
          <Ratai dydis="17">
             <PagaminimoData>2016-02-23</PagaminimoData>
             <Padangos>Vasarines</Padangos>
+            <PadanguSlegis>2.0 2.0 2.1 2.1</PadanguSlegis>
          </Ratai>
       </Automobilis>
+      <Elektromobilis id="3">
+         <BendraInformacija>
+            <Marke>Nissan</Marke>
+            <Modelis>Leaf</Modelis>
+            <PagaminimoData>2014-02-02</PagaminimoData>
+            <kaina>5000</kaina>
+         </BendraInformacija>
+         <Ratai dydis="17">
+            <PagaminimoData>2017-02-23</PagaminimoData>
+            <Padangos>Ziemines</Padangos>
+            <PadanguSlegis>2.0 2.0 2.1 2.1</PadanguSlegis>
+         </Ratai>
+      </Elektromobilis>
    </grupe>
    <grupe kebuloTipas="sedanas">
-      <Automobilis id="3">
+      <Automobilis id="4">
          <BendraInformacija>
             <Marke>BMW</Marke>
-            <Modelis>330d</Modelis>
+            <Modelis>330i</Modelis>
             <PagaminimoData>2005-06-04</PagaminimoData>
             <kaina>2500</kaina>
          </BendraInformacija>
          <Variklis serijosNumeris="00003">
-            <DarbinisTuris>3.0</DarbinisTuris>
-            <Galia>135kw</Galia>
+            <KuroTipas DarbinisTuris="3.0">Benzinas</KuroTipas>
+            <GaliaAG>135</GaliaAG>
          </Variklis>
          <Ratai dydis="17">
             <PagaminimoData>2017-04-05</PagaminimoData>
             <Padangos>Vasarines</Padangos>
+            <PadanguSlegis>2.0 2.0 2.1 2.1</PadanguSlegis>
          </Ratai>
       </Automobilis>
-      <Automobilis id="4">
+      <Automobilis id="5">
          <BendraInformacija>
             <Marke>Skoda</Marke>
             <Modelis>Octavia</Modelis>
@@ -59,15 +75,54 @@
             <kaina>2000</kaina>
          </BendraInformacija>
          <Variklis serijosNumeris="00004">
-            <DarbinisTuris>1.9</DarbinisTuris>
-            <Galia>81lw</Galia>
+            <KuroTipas DarbinisTuris="1.9">Dyzelinas</KuroTipas>
+            <GaliaAG>81</GaliaAG>
          </Variklis>
          <Ratai dydis="16">
             <PagaminimoData>2006-05-05</PagaminimoData>
             <Padangos>Ziemines</Padangos>
+            <PadanguSlegis>2.0 2.0 2.1 2.1</PadanguSlegis>
+         </Ratai>
+      </Automobilis>
+      <Automobilis id="6">
+         <BendraInformacija>
+            <Marke>Ford</Marke>
+            <Modelis>F150</Modelis>
+            <PagaminimoData>20016-06-04</PagaminimoData>
+            <kaina>4999</kaina>
+         </BendraInformacija>
+         <Variklis serijosNumeris="00005">
+            <KuroTipas DarbinisTuris="6.0">Dyzelinas</KuroTipas>
+            <GaliaKW>135</GaliaKW>
+            <traukiamojiGalia>2tonos</traukiamojiGalia>
+         </Variklis>
+         <Ratai dydis="17">
+            <PagaminimoData>2017-04-05</PagaminimoData>
+            <Padangos>Vasarines</Padangos>
+            <PadanguSlegis>2.0 2.0 2.1 2.1</PadanguSlegis>
          </Ratai>
       </Automobilis>
    </grupe>
+   <parduotiAutomobiliai>
+     <Automobilis id="1">
+        <BendraInformacija>
+           <Marke>Vw</Marke>
+           <Modelis>Golf</Modelis>
+           <PagaminimoData>1997-12-12</PagaminimoData>
+           <kaina>1500</kaina>
+        </BendraInformacija>
+        <Variklis serijosNumeris="00001">
+           <KuroTipas DarbinisTuris="1.9">Dyzelinas</KuroTipas>
+           <GaliaKW>81</GaliaKW>
+        </Variklis>
+        <Ratai dydis="17">
+           <PagaminimoData>2015-12-12</PagaminimoData>
+           <Padangos>Ziemines</Padangos>
+           <PadanguSlegis>2.0 2.0 2.1 2.1</PadanguSlegis>
+        </Ratai>
+     </Automobilis>
+   </parduotiAutomobiliai>
+
 </AutomobiliuAikstele>
 
 
