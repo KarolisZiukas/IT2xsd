@@ -1,0 +1,93 @@
+{
+   "$schema":"http://json-schema.org/draft-07/schema#",
+   "definitions":{
+   "AutomobilisSchema":{
+      "type":"array",
+      "properties":{
+         "id": {
+           "anyOf": [
+             { "type": "string", "maxLength": 5 },
+             { "type": "number", "minimum": 0 }
+           ]
+         },
+         "BendraInformacija":{
+           "type": "object",
+           "properties": {
+            "Marke":{
+               "type":"string"
+            },
+            "Modelis":{
+              "anyOf": [
+                { "type": "string" },
+                { "type": "number" }
+              ]
+            },
+            "PagaminimoData":{
+               "type":"string",
+               "format": "date"
+            },
+            "kaina": {
+              "allOf": [
+                { "type": "integer" },
+                { "maximum": 5000 }
+              ]
+            }
+          }
+         },
+         "Variklis":{
+           "type": "object",
+           "properties": {
+            "-serijosNumeris":{
+               "type":"integer",
+               "pattern": "^[0-9]{5}$"
+            },
+            "KuroTipas":{
+              "type": "string",
+              "enum": ["Dyzelinas", "Benzinas"]
+            },
+            "Galia":{
+               "type":"integer",
+               "pattern":"^[0-9]{3}kw$"
+            }
+           }
+         },
+         "Ratai":{
+           "type": "object",
+            "properties": {
+            "-dydis":{
+               "type":"integer"
+            },
+            "PagaminimoData":{
+               "type":"string"
+            },
+            "Padangos":{
+               "type":"string"
+            },
+            "PadanguSlegis":{
+               "type":"array",
+               "items":{
+                  "type":"number"
+               },
+               "minItems": 4
+            }
+          }
+        }
+      }
+    }
+   },
+   "type":"object",
+   "properties":{
+     "parduotiAutomobiliai": {"$ref": "#/definitions/Automobilis"},
+      "AutomobiliuAikstele":{
+         "type":"object",
+         "properties":{
+            "grupe":{
+               "type":"array",
+               "properties":{
+                 "Automobilis": {"$ref": "#/definitions/Automobilis"}
+               }
+            }
+         }
+      }
+   }
+}
